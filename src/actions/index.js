@@ -1,5 +1,6 @@
 export const ADD_TO_CART = 'ADD_TO_CART'
 export const CLEAR_CART = 'CLEAR_CART'
+export const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
   
 export const addToCart = (id) => {
   return {
@@ -11,5 +12,12 @@ export const addToCart = (id) => {
 export const clearCart = ( () => {
   return {
     type: CLEAR_CART
+  }
+})
+
+export const removeFromCart = ( (id) => {
+  return {
+    type: REMOVE_FROM_CART,
+    payload: { id }
   }
 })

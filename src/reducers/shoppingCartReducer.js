@@ -1,4 +1,5 @@
-import { ADD_TO_CART, CLEAR_CART } from "../actions";
+import { ADD_TO_CART, CLEAR_CART, REMOVE_FROM_CART } from "../actions";
+
 
 const shoppingCartReducer = (state = [], action) => {
   switch (action.type) {
@@ -6,6 +7,9 @@ const shoppingCartReducer = (state = [], action) => {
       return [...state, action.payload.id];
 
     case CLEAR_CART:
+      return [];
+
+    case REMOVE_FROM_CART:
       return [];
 
     default:
