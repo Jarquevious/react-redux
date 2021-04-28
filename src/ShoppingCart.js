@@ -12,7 +12,7 @@ function ShoppingCart() {
     <div className="ShoppingCart">
       <h1>Your Cart</h1>
       <ul>
-        {shoppingCart.map(id => <ShoppingCartItem id={id} />)}
+        {shoppingCart.map((item, i) => <ShoppingCartItem id={item.id} count={item.count} index={i}/>)}
       </ul>
       <TotalCost />
       <ClearCartButton />

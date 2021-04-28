@@ -3,8 +3,8 @@ import data from './data'
 
 function TotalCost() {
     const shoppingCart = useSelector( state => state.shoppingCart)
-    const total = shoppingCart.reduce((acc, id) => {
-        const price = parseFloat(data[id].price.slice(1) )
+    const total = shoppingCart.reduce((acc, item) => {
+        const price = parseFloat(data[item.id].price.slice(1) ) * item.count
         return acc + price
     }, 0)
 
